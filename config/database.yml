@@ -21,7 +21,6 @@ default: &default
   host: db
   username: postgres
   password: password
-  port: 5433
 
 development:
   <<: *default
