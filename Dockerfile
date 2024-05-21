@@ -74,10 +74,3 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
 
-# プリコンパイルするためのコマンド
-# 下記エラー対策
-# ActionView::Template::Error (The asset "application.css" is not present in the asset pipeline.
-RUN /app/bin/rails assets:precompile
-
-# railsサーバー起動コマンド
-CMD ["rails", "server", "-b", "0.0.0.0"]
