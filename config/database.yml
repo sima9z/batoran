@@ -85,3 +85,4 @@ production:
   database: sign
   username: sign_user
   password: <%= ENV["APP_DATABASE_PASSWORD"] %>
+  host: dpg-cp6sg9q0si5c73ajmhg0-a
