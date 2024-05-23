@@ -1,24 +1,22 @@
-# README
+# [サービス名]
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サービス概要
+星に関係する様々な機能を提供します。
 
-Things you may want to cover:
+##　想定されるユーザー層
+星に興味がある人。
 
-* Ruby version
+## サービスコンセプト
+* 仕事帰りに空を見ながら帰っていたので、自分でも使いたくなるようなアプリを目指しました。
+* 帰り道にふと空を見上げたくなるアプリです。
+* どこが売りになるか、差別化ポイントになるか
 
-* System dependencies
+## 実装を予定している機能
+### MVP
+* トップページ
+* 星の一覧・検索機能
+* 神話一覧
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### その後の機能
+* 自分の星座の方角がわかる機能
+* 運勢占い・相性占い・シェア機能
