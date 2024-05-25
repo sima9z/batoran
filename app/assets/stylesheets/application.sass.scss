@@ -6,7 +6,7 @@
 }
 
 header{
-  height: 12%;
+  height: 10%;
   background-color:#fff;
 }
 
@@ -20,17 +20,17 @@ body{
 }
 
 main{
-  height:84%;
+  height:85%;
 }
 
 footer{
-  height:4%;
+  height:5%;
   background-color:#fff;
 }
 
 .header-menu{
   float: right;
-  margin-top:80px;
+  margin-top:70px;
 }
 
 .header-menu-link{
@@ -72,4 +72,14 @@ footer{
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
+}
+
+.constellations_that_can_be_observed_today::after {
+  content: '';
+  flex: 1 1 30%;
+}
+
+.footer-menu{
+  float:right;
+  margin:10px 10px;
 }
