@@ -1,6 +1,42 @@
 // Entry point for your Sass build
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+  height: 120px;
+  background-color:#fff;
+}
+
 body{
   height:1000px;
-  color:white;
-  background: linear-gradient(to bottom, #002379, #fff);
+  color:#fff;
+  background-image:url("photo-1488866022504-f2584929ca5f.avif");
+  background-size: cover;
+  background-repeat:no-repeat;
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+.header-menu{
+  float: right;
+  margin-top:80px;
+}
+
+.header-menu-link{
+  text-decoration: none;
+  color:#333;
+  margin-right:15px;
+  font-size:18px;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+  margin-right:5px;
+}
+
+.top-title{
+  text-align: center;
+  margin-top: 100px;
 }

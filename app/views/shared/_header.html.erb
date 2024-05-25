@@ -1,0 +1,13 @@
+<%= image_tag "logo.png", height:"120px" %>
+
+<div class="header-menu">
+  <%= link_to root_path, class: "header-menu-link" do %>
+    <i class="material-icons-outlined">auto_awesome</i>トップページ
+  <% end %>
+  <%= link_to signs_path, class: "header-menu-link" do %>
+    <i class="material-icons-outlined">star_rate</i>星座図鑑
+  <% end %>
+  <%= link_to planets_path, class: "header-menu-link" do %>
+    <i class="material-icons-outlined">rocket</i>惑星図鑑
+  <% end %>
+</div>
