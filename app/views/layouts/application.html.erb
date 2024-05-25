@@ -12,10 +12,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   </head>
 
-  <header>
-    <%= render "shared/header" %>
-  </header>
+
+
   <body>
-    <%= yield %>
+    
+    <header>
+      <%= render "shared/header" %>
+    </header>
+    
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <%= render "shared/footer" %>
+    </footer>
+  
   </body>
+
 </html>

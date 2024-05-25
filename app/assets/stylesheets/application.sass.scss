@@ -6,7 +6,7 @@
 }
 
 header{
-  height: 120px;
+  height: 12%;
   background-color:#fff;
 }
 
@@ -17,6 +17,15 @@ body{
   background-size: cover;
   background-repeat:no-repeat;
   font-family: "M PLUS 1p", sans-serif;
+}
+
+main{
+  height:84%;
+}
+
+footer{
+  height:4%;
+  background-color:#fff;
 }
 
 .header-menu{
