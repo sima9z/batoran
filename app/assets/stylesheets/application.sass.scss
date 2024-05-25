@@ -47,5 +47,29 @@ footer{
 
 .top-title{
   text-align: center;
-  margin-top: 100px;
+  margin: 100px 0;
+}
+
+.constellations_that_can_be_observed_today_title{
+  text-align: center;
+  margin-bottom:50px;
+}
+
+.constellations_that_can_be_observed_today{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width:700px;
+  margin:0 auto;
+  padding:20px;
+  background-color:#fff;
+  color:#333;
+  border-radius: 10px;
+}
+
+.constellations_that_can_be_observed_today p {
+  flex: 1 1 30%; /* 1行で3つの要素を表示 */
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
 }

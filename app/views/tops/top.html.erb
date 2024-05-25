@@ -2,3 +2,13 @@
   <h1>星図鑑</h1>
 </div>
 
+<div class="constellations_that_can_be_observed_today_title"">
+  <h3>今日見える天体:</h3>
+</div>
+
+<div class="constellations_that_can_be_observed_today">
+  <% @data['results'].each do |object| %>
+    <p><%= object['jpName'] %></p>
+  <% end %>
+</div>
+
