@@ -1,7 +1,13 @@
-<h1>Signs</h1>
+<div class="signs_title">
+  <h2><i class="material-icons-outlined">star_rate</i>星座一覧</h2>
+</div>
 
-<p>
-  <strong>Data:</strong>
-  <%= @data.inspect %>
-</p>
+<div class="signs_index">
+  <% @data['results'].each do |object| %>
+    <p><%=link_to object['jpName'], signs_path(object), class: "index-menu-link" %></p>
+  <% end %>
+  <p class="dummy"></p>
+  <p class="dummy"></p>
+  <p class="dummy"></p>
+</div>
 
