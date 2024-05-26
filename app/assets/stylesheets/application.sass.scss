@@ -6,8 +6,11 @@
 }
 
 header{
-  height: 10%;
+  height: 15%;
+  width: 100%;
   background-color:#fff;
+  position: fixed;
+  top: 0;
 }
 
 body{
@@ -20,11 +23,12 @@ body{
 }
 
 main{
-  height:85%;
+  height:95%;
 }
 
 footer{
   height:5%;
+  width: 100%;
   background-color:#fff;
 }
 
@@ -47,18 +51,20 @@ footer{
 
 .top-title{
   text-align: center;
+  padding-top:100px;
   margin: 100px 0;
 }
 
 .constellations_that_can_be_observed_today_title{
   text-align: center;
   margin-bottom:50px;
+  letter-spacing: 5px;
 }
 
 .constellations_that_can_be_observed_today{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start; 
   width:700px;
   margin:0 auto;
   padding:20px;
@@ -68,18 +74,30 @@ footer{
 }
 
 .constellations_that_can_be_observed_today p {
-  flex: 1 1 30%; /* 1行で3つの要素を表示 */
+  flex: 1 1 25%; /* 1行で3つの要素を表示 */
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
 }
 
+.constellations_that_can_be_observed_today .dummy {
+  visibility: hidden;
+}
+
 .constellations_that_can_be_observed_today::after {
   content: '';
-  flex: 1 1 30%;
+  flex: 1 1 25%;
+}
+
+.planets_title{
+  margin:100px;
 }
 
 .footer-menu{
   float:right;
   margin:10px 10px;
+}
+
+i.fa-twitter-square{
+  color: #000;
 }
