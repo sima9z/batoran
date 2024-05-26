@@ -1,6 +1,9 @@
-<h1>planets</h1>
+<div class="planets_title">
+<h3>惑星一覧</h3>
+</div>
 
-<p>
-  <strong>Data:</strong>
-  <%= @data.inspect %>
-</p>
+<div class="planets_index">
+<% @planets_data['results'].each do |object| %>
+  <p><%= object['jpName'] %></p>
+<% end %>
+</div>

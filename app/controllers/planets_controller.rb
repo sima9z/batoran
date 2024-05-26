@@ -1,31 +1,28 @@
 class PlanetsController < ApplicationController
 
   def index
-    require 'faraday' # Faradayを使用する場合
+    require 'faraday'
+    require 'json'
+
+    # 現在の日時を取得
+    current_time = Time.now
 
     # Bearer 
     token = ENV['BEARER_TOKEN']
 
-    # Faradayのインスタンスを作成
-    conn = Faraday.new(url: 'https://app.livlog.xyz/hoshimiru/constellation')
-
-    # リクエストヘッダーに認証情報を含める
-    conn.headers['Authorization'] = "Bearer #{token}"
-    conn.headers['Accept'] = 'application/json'
-
-    # APIエンドポイントにリクエストを送信
-    response = conn.get do |req|
-      req.url '', { lat: '35.6895', lng: '139.6917', date: '2020-01-15', hour: '20', min: '00', id: '2', disp: 'on' }
+    # 惑星の情報を取得
+    planets_conn = Faraday.new(url: 'https://app.livlog.xyz/hoshimiru/planet') do |faraday|
+      faraday.request  :url_encoded
+      faraday.response :logger
+      faraday.adapter  Faraday.default_adapter
+      faraday.headers['Authorization'] = "Bearer #{token}"
+      faraday.headers['Accept'] = 'application/json'
     end
 
-    # レスポンスを解析
-    @data = JSON.parse(response.body)
-  end
+    planets_response = planets_conn.get do |req|
+      req.url '', { lat: 35.6581, lng: 139.7414, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M') }
+    end
 
-  def your_controller_method
-    lat = params[:lat]
-    lng = params[:lng]
-    # 位置情報を使用した処理をここで行う
+    @planets_data = JSON.parse(planets_response.body)    
   end
-
 end
