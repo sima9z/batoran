@@ -25,4 +25,7 @@ class PlanetsController < ApplicationController
 
     @planets_data = JSON.parse(planets_response.body)    
   end
+
+  def show
+  end
 end

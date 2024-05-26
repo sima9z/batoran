@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   root to:"tops#top"
-  resources :signs, only: [:index]
-  resources :planets, only: [:index]
+  resources :signs, only: [:index, :show]
+  resources :planets, only: [:index, :show]
+  resources :fortunes, only: [:index]
 
   # Defines the root path route ("/")
   # root "posts#index"

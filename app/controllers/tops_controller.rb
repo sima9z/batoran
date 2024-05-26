@@ -18,7 +18,7 @@ class TopsController < ApplicationController
     end
 
     response = conn.get do |req|
-      req.url '', { lat: 35.6581, lng: 139.7414, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M') }
+      req.url '', { lat: 35.6581, lng: 139.7414, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), disp:"off" }
     end
 
     @data = JSON.parse(response.body)

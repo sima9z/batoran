@@ -34,13 +34,13 @@ footer{
 
 .header-menu{
   float: right;
-  margin-top:70px;
+  margin-top:60px;
 }
 
 .header-menu-link{
   text-decoration: none;
   color:#333;
-  margin-right:15px;
+  margin-right: 20px;
   font-size:18px;
 }
 
@@ -59,6 +59,11 @@ footer{
   text-align: center;
   margin-bottom:50px;
   letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.constellations_that_can_be_observed_today_title i{
+  padding-right: 5px;
 }
 
 .constellations_that_can_be_observed_today{
@@ -71,6 +76,7 @@ footer{
   background-color:#fff;
   color:#333;
   border-radius: 10px;
+  font-weight: bold;
 }
 
 .constellations_that_can_be_observed_today p {
@@ -89,8 +95,78 @@ footer{
   flex: 1 1 25%;
 }
 
+.signs_title{
+  text-align: center;
+  padding-top:150px;
+  margin-bottom:50px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.signs_title i{
+  padding-right: 5px;
+}
+
+.signs_index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  width:90%;
+  margin:0 auto;
+  padding:20px;
+  background-color:#fff;
+  color:#333;
+  border-radius: 10px;
+}
+
+.signs_index p{
+  flex: 1 1 15%;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: center;
+}
+
+.signs_index .dummy {
+  visibility: hidden;
+}
+
+.signs_index::after {
+  content: '';
+  flex: 1 1 15%;
+}
+
 .planets_title{
-  margin:100px;
+  text-align: center;
+  padding-top:150px;
+  margin-bottom:50px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.planets_title i{
+  padding-right: 5px;
+}
+
+.planets_index{
+  width:15%;
+  margin:0 auto;
+  padding:20px;
+  background-color:#fff;
+  color:#333;
+  border-radius: 10px;
+}
+
+.planets_index p{
+  padding: 8px;
+  text-align: center;
+}
+
+.index-menu-link{
+  text-decoration: none;
+  color:#333;
+  margin-right:15px;
+  font-size:18px;
+  font-weight: bold;
 }
 
 .footer-menu{

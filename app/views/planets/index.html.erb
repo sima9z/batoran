@@ -1,9 +1,9 @@
 <div class="planets_title">
-<h3>惑星一覧</h3>
+  <h2><i class="material-icons-outlined">rocket</i>惑星一覧</h2>
 </div>
 
 <div class="planets_index">
-<% @planets_data['results'].each do |object| %>
-  <p><%= object['jpName'] %></p>
-<% end %>
+  <% @planets_data['results'].each do |object| %>
+    <p><%= link_to object['jpName'], planets_path(object), class: "index-menu-link" %></p>
+  <% end %>
 </div>
