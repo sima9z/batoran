@@ -9,7 +9,7 @@
 
   <div class="constellations_that_can_be_observed_today">
     <% @data['results'].each do |object| %>
-      <p><%= object['jpName'] %></p>
+      <p><%=link_to object['jpName'], sign_path(object['id']), class: "index-menu-link" %></p>
     <% end %>
     <p class="dummy"></p>
     <p class="dummy"></p>

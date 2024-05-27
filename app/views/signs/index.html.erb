@@ -4,7 +4,7 @@
 
 <div class="signs_index">
   <% @data['results'].each do |object| %>
-    <p><%=link_to object['jpName'], signs_path(object), class: "index-menu-link" %></p>
+    <p><%=link_to object['jpName'], sign_path(object['id']), class: "index-menu-link" %></p>
   <% end %>
   <p class="dummy"></p>
   <p class="dummy"></p>

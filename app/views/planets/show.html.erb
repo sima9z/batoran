@@ -1,0 +1,23 @@
+<div class="planet_detail">
+  <% @planets_data['results'].each do |object| %>
+    <div class="planet_info">
+      <div class="text_content">
+        <div class="text_upper_part">
+          <div class="text_upper_part_name">
+            <h1><%= object['jpName'] %><span></h1>
+            <h3><%= object['enName'] %></h3>
+          </div>
+            <h4>【方角】 <%= object['direction'] %></h4>
+            <h4>【高度】 <%= object['altitude'] %></h4>
+        </div>
+        <div class="text_beneath">
+          <p><%= object['content'] %></p>
+          <p><%= object['origin'] %></p>
+        </div>
+      </div>
+      <div class="image_content">
+        <%= image_tag object['starImage'], height: "400px", style: "border-radius: 50%; box-shadow: 0 0 15px white;" %>
+      </div>
+    </div>
+  <% end %>
+</div>
