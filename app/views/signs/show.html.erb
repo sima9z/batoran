@@ -14,7 +14,9 @@
         </div>
         <div class="text_beneath">
           <p><%= object['content'] %></p>
-          <p><%= object['origin'] %></p>
+          <% if object['origin']!="なし" %>
+           <p><%= object['origin'] %></p>
+          <% end %>
         </div>
       </div>
       <div class="image_content">
