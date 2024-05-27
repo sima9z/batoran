@@ -10,8 +10,6 @@ class FortunesController < ApplicationController
     response = conn.get
 
     @data = JSON.parse(response.body)
-
-    puts @data
   end
 
 end
