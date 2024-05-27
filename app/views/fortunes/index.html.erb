@@ -1,3 +1,5 @@
 <div style="margin-top:200px; background-color: white; color:#333;">
-  <%= @data %>
+  <% @data['horoscope'][Time.now.strftime("%Y/%m/%d")].each do |horoscope| %>
+    <%= link_to horoscope['sign'], fortune_path(horoscope['sign']) %>
+  <% end %>
 </div>

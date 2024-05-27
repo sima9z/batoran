@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root to:"tops#top"
   resources :signs, only: [:index, :show]
   resources :planets, only: [:index, :show]
-  resources :fortunes, only: [:index]
+  resources :fortunes, only: [:index, :show]
 
   # Defines the root path route ("/")
   # root "posts#index"
