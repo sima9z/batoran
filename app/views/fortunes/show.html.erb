@@ -1,4 +1,39 @@
-<div class="fortune_result">
-  <h1><%= @sign %>の占い結果</h1>
-  <p><%= @horoscope['content'] %></p>
+<div class="fortune_result_container">
+  <div class="fortune_result">
+    <h1><%= @sign %>の占い結果</h1>
+    <h2>第<%= @horoscope['rank'] %>位！</h2>
+    <h4><%= @horoscope['content'] %></h4>
+    <p>【ラッキーアイテム】<%= @horoscope['item'] %></p>
+    <p>【ラッキーカラー】<%= @horoscope['color'] %></p>
+    <p>【総合運】<%= "☆" * @horoscope['total'] %></p>
+    <p>【金運】<%= "☆" * @horoscope['money'] %></p>
+    <p>【仕事運】<%= "☆" * @horoscope['job'] %></p>
+    <p>【恋愛運】<%= "☆" * @horoscope['love'] %></p>
+  </div>
+  
+  <div class="twitter_share_container">
+    <%= link_to "https://twitter.com/share?url=#{request.url}", target: '_blank', class: "twitter_share" do %>
+      <i class="fa-brands fa-square-x-twitter"></i>結果をXでシェア
+    <%end%>
+  </div>
 </div>
+
+<script>
+  document.querySelector('.twitter_share').addEventListener('click', function(e) {
+    e.preventDefault();
+    const sign = '<%= @sign %>';
+    const rank = '<%= @horoscope['rank'] %>';
+    const content = '<%= @horoscope['content'] %>';
+    const item = '<%= @horoscope['item'] %>';
+    const color = '<%= @horoscope['color'] %>';
+    const total = '<%= "☆" * @horoscope['total'] %>';
+    const money = '<%= "☆" * @horoscope['money'] %>';
+    const job = '<%= "☆" * @horoscope['job'] %>';
+    const love = '<%= "☆" * @horoscope['love'] %>';
+    const siteUrl = '<%= "https://sign-dxuu.onrender.com/fortunes" %>'
+    const tweet = encodeURIComponent(sign + "の今日の運勢\n第" + rank + "位\n" + content + "\nラッキーアイテム: " + item + "\nラッキーカラー: "+ color + "\n"+ siteUrl);
+    const url = 'https://twitter.com/intent/tweet?text=' + tweet;
+    window.open(url, '_blank');
+  });
+</script>
+
