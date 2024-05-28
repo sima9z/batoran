@@ -1,5 +1,9 @@
-<div style="margin-top:200px; background-color: white; color:#333;">
+<div class="fortune_titles">
+  <h2><i class="material-icons-outlined">auto_awesome_motion</i>本日の運勢占い</h2>
+</div>
+
+<div class="fortune_index">
   <% @data['horoscope'][Time.now.strftime("%Y/%m/%d")].each do |horoscope| %>
-    <%= link_to horoscope['sign'], fortune_path(horoscope['sign']) %>
+    <p><%= link_to horoscope['sign'], fortune_path(horoscope['sign']), class: "index-menu-link" %></p>
   <% end %>
 </div>
