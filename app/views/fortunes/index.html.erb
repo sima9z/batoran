@@ -4,6 +4,6 @@
 
 <div class="fortune_index">
   <% @data['horoscope'][Time.now.strftime("%Y/%m/%d")].each do |horoscope| %>
-    <p><%= image_tag "#{horoscope['sign']}.png", height: "30px" %> <%= link_to horoscope['sign'], fortune_path(horoscope['sign']), class: "index-menu-link" %></p>
+    <p><%= image_tag "#{horoscope['sign']}.png", height: "30px", style:"vertical-align: middle; margin-right:1px;" %> <%= link_to horoscope['sign'], fortune_path(horoscope['sign']), class: "index-menu-link" %></p>
   <% end %>
 </div>
