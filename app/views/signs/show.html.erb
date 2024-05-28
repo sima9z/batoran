@@ -27,3 +27,22 @@
     </div>
   <% end %>
 </div>
+
+<script>
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      $.ajax({
+        url: '/update_location',
+        type: 'POST',
+        data: { 
+          latitude: position.coords.latitude, 
+          longitude: position.coords.longitude 
+        }
+      });
+    }, function(error) {
+      alert('位置情報の取得に失敗しました。');
+    });
+  } else {
+    alert('このブラウザでは位置情報の取得がサポートされていません。');
+  }
+  </script>

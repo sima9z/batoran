@@ -8,6 +8,9 @@ class SignsController < ApplicationController
 
     current_time = Time.now
 
+    lat = session[:latitude] || '35.6581'  # デフォルト値を設定
+    lng = session[:longitude] || '139.7414'  # デフォルト値を設定
+
     # Faradayのインスタンスを作成
     conn = Faraday.new(url: 'https://app.livlog.xyz/hoshimiru/constellation')
 
@@ -17,7 +20,7 @@ class SignsController < ApplicationController
 
     # APIエンドポイントにリクエストを送信
     response = conn.get do |req|
-      req.url '', { lat: '35.6895', lng: '139.6917', date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), disp:"on" }
+      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), disp:"on" }
     end
 
     # レスポンスを解析
@@ -30,6 +33,9 @@ class SignsController < ApplicationController
 
     current_time = Time.now
 
+    lat = session[:latitude] || '35.6581'  # デフォルト値を設定
+    lng = session[:longitude] || '139.7414'  # デフォルト値を設定
+
     # Faradayのインスタンスを作成
     conn = Faraday.new(url: 'https://app.livlog.xyz/hoshimiru/constellation')
 
@@ -39,7 +45,7 @@ class SignsController < ApplicationController
 
     # APIエンドポイントにリクエストを送信
     response = conn.get do |req|
-      req.url '', { lat: '35.6895', lng: '139.6917', date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), id: params[:id], disp:"on" }
+      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), id: params[:id], disp:"on" }
     end
 
     # レスポンスを解析

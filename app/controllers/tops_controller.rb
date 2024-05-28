@@ -8,6 +8,9 @@ class TopsController < ApplicationController
     # 現在の日時を取得
     current_time = Time.now
 
+    lat = session[:latitude] || '35.6581'  # デフォルト値を設定
+    lng = session[:longitude] || '139.7414'  # デフォルト値を設定
+
     # 星座の情報を取得
     conn = Faraday.new(url: 'https://app.livlog.xyz/hoshimiru/constellation') do |faraday|
       faraday.request  :url_encoded
@@ -18,7 +21,7 @@ class TopsController < ApplicationController
     end
 
     response = conn.get do |req|
-      req.url '', { lat: 35.6581, lng: 139.7414, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), disp:"off" }
+      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), disp:"off" }
     end
 
     @data = JSON.parse(response.body)
