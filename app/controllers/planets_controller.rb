@@ -22,7 +22,7 @@ class PlanetsController < ApplicationController
     end
 
     planets_response = planets_conn.get do |req|
-      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M') }
+      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), disp:"on" }
     end
 
     @planets_data = JSON.parse(planets_response.body)    
@@ -48,7 +48,7 @@ class PlanetsController < ApplicationController
     end
 
     planets_response = planets_conn.get do |req|
-      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), id: params[:id] }
+      req.url '', { lat: lat, lng: lng, date: current_time.strftime('%Y-%m-%d'), hour: current_time.strftime('%H'), min: current_time.strftime('%M'), id: params[:id], disp:"on" }
     end
 
     @planets_data = JSON.parse(planets_response.body)    
