@@ -2,8 +2,6 @@
   <%= image_tag "星の図鑑.png",height: "100px" %>
 </div>
 
-<%= Time.now %>
-
 <div class="top-container">
   <div class="constellations_that_can_be_observed_today_title">
     <h2><i class="material-icons-outlined">auto_awesome</i>現在見える星座</h2>
@@ -23,15 +21,15 @@
 </div>
 
 <script>
-navigator.geolocation.getCurrentPosition(function(position) {
-  $.ajax({
-    url: '/update_location',
-    type: 'POST',
-    data: { 
-      latitude: position.coords.latitude, 
-      longitude: position.coords.longitude 
-    },
-    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
+  navigator.geolocation.getCurrentPosition(function(position) {
+    $.ajax({
+      url: '/update_location',
+      type: 'POST',
+      data: { 
+        latitude: position.coords.latitude, 
+        longitude: position.coords.longitude 
+      },
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
+    });
   });
-});
-  </script>
+</script>
