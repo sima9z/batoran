@@ -25,20 +25,14 @@
 </div>
 
 <script>
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      $.ajax({
-        url: '/update_location',
-        type: 'POST',
-        data: { 
-          latitude: position.coords.latitude, 
-          longitude: position.coords.longitude 
-        }
-      });
-    }, function(error) {
-      alert('位置情報の取得に失敗しました。');
+  navigator.geolocation.getCurrentPosition(function(position) {
+    $.ajax({
+      url: '/update_location',  // 現在地情報を送信するエンドポイント
+      type: 'POST',
+      data: { 
+        latitude: position.coords.latitude, 
+        longitude: position.coords.longitude 
+      }
     });
-  } else {
-    alert('このブラウザでは位置情報の取得がサポートされていません。');
-  }
+  });
   </script>
