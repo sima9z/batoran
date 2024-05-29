@@ -16,6 +16,7 @@
           <h4>【神話】</h4>
           <p><%= object['origin'] %></p>
         </div>
+        <%= link_to "wiki", "https://ja.wikipedia.org/wiki/#{object['jpName']}", class: "wiki_link" %>
       </div>
       <div class="image_content">
         <%= image_tag object['starImage'], height: "400px", style: "border-radius: 50%; box-shadow: 0 0 15px white;" %>
@@ -23,17 +24,3 @@
     </div>
   <% end %>
 </div>
-
-<script>
-navigator.geolocation.getCurrentPosition(function(position) {
-  $.ajax({
-    url: '/update_location',
-    type: 'POST',
-    data: { 
-      latitude: position.coords.latitude, 
-      longitude: position.coords.longitude 
-    },
-    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
-  });
-});
-  </script>

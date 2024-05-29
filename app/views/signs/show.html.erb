@@ -20,6 +20,7 @@
             <p><%= object['origin'] %></p>
           <% end %>
         </div>
+        <%= link_to "wiki", "https://ja.wikipedia.org/wiki/#{object['jpName']}", class: "wiki_link" %>
       </div>
       <div class="image_content">
         <%= image_tag object['starImage'], height: "400px", style: "border-radius: 50%; box-shadow: 0 0 15px white;" %>
