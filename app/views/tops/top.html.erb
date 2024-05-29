@@ -19,17 +19,3 @@
     <p>※季節関係なくその時点で観測可能なすべての星座が出力されます。【季節】はその星座が目立つ季節を指します。</p>
   </div>
 </div>
-
-<script>
-  navigator.geolocation.getCurrentPosition(function(position) {
-    $.ajax({
-      url: '/update_location',
-      type: 'POST',
-      data: { 
-        latitude: position.coords.latitude, 
-        longitude: position.coords.longitude 
-      },
-      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
-    });
-  });
-</script>

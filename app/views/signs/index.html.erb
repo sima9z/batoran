@@ -10,18 +10,3 @@
   <p class="dummy"></p>
   <p class="dummy"></p>
 </div>
-
-<script>
-navigator.geolocation.getCurrentPosition(function(position) {
-  $.ajax({
-    url: '/update_location',
-    type: 'POST',
-    data: { 
-      latitude: position.coords.latitude, 
-      longitude: position.coords.longitude 
-    },
-    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
-  });
-});
-  </script>
-
