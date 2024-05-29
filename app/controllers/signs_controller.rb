@@ -24,7 +24,14 @@ class SignsController < ApplicationController
     end
 
     # レスポンスを解析
-    @data = JSON.parse(response.body)
+    data = JSON.parse(response.body)
+
+      # 検索クエリに基づいてフィルタリング
+    if params[:search].present?
+      @data = data['results'].select { |result| result['jpName'].include?(params[:search]) }
+    else
+      @data = data['results']
+    end
   end
 
   def show

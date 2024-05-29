@@ -105,13 +105,27 @@ footer{
 .signs_title{
   text-align: center;
   padding-top:150px;
-  margin-bottom:50px;
+  margin-bottom:30px;
   letter-spacing: 5px;
   font-weight: bold;
 }
 
 .signs_title i{
   padding-right: 5px;
+}
+
+.signs_form{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.signs_form_text{
+  padding: 3px 10px;
+}
+
+.signs_form_button{
+  padding: 2px;
+  margin-left:5px;
 }
 
 .signs_index{
