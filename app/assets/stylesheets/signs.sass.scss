@@ -1,0 +1,75 @@
+.signs_title{
+  text-align: center;
+  padding-top:150px;
+  margin-bottom:30px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.signs_title i{
+  padding-right: 5px;
+}
+
+.signs_form{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signs_form_text{
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+.signs_form_button{
+  padding: 7px;
+  margin-left:5px;
+  background-color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.signs_form_button:hover{
+  color: white; /* ホバー時の色を設定 */
+  background-color: black; /* バックグラウンド色も反転させる場合 */
+}
+
+.signs_index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  width:90%;
+  margin:0 auto;
+  padding:20px 20px 0px 20px;
+  background-color:#fff;
+  color:#333;
+  border-radius: 10px;
+}
+
+.signs_index p{
+  flex: 1 1 15%;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: center;
+}
+
+.signs_index .dummy {
+  visibility: hidden;
+}
+
+.signs_index::after {
+  content: '';
+  flex: 1 1 15%;
+}
+
+.sign_detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.sign_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 100px 0;
+  width: 90%;
+}

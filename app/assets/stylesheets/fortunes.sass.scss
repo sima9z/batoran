@@ -1,0 +1,88 @@
+.fortune_titles{
+  text-align: center;
+  padding-top:150px;
+  margin-bottom:50px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.fortune_titles i{
+  padding-right: 5px;
+}
+
+.fortune_index{
+  width:15%;
+  margin:0 auto;
+  padding:20px;
+  background-color:#fff;
+  color:#333;
+  border-radius: 10px;
+}
+
+.fortune_index p{
+  padding: 8px;
+  text-align: center;
+}
+
+.fortune_image{
+  height: 30px;
+}
+
+.fortune_result_container{
+  width: 70%;
+  background-color:#fff;
+  border-radius: 10px;
+  color:#333;
+  padding:50px; 
+  margin:200px auto;
+  text-align: center;
+}
+
+.fortune_result_container h1{
+  margin-bottom: 50px;
+}
+
+.fortune_result_container h2{
+  margin-bottom: 30px;
+}
+
+.fortune_result_container h4{
+  margin-bottom: 30px;
+}
+
+.fortune_result_container p{
+  padding: 8px;
+  font-weight: bold;
+}
+
+.fortune_result_image{
+  height: 50px;
+  vertical-align: middle;
+  margin-right:5px;
+}
+
+.twitter_share_container{
+  margin-top: 50px;
+}
+
+.twitter_share{
+  text-decoration: none;
+  margin-right:15px;
+  font-size:18px;
+  font-weight: bold;
+  border: solid 2px #fff;
+  background-color: #333;
+  border-radius: 5px;
+  color:#fff;
+  padding:5px;
+}
+
+.twitter_share i{
+  margin-right: 5px;
+}
+
+.twitter_share:hover{
+  border: solid 2px #333;
+  background-color: #fff;
+  color:#333;
+}

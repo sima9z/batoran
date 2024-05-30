@@ -1,6 +1,6 @@
 <div class="fortune_result_container">
   <div class="fortune_result">
-    <h1><%= image_tag "#{@sign}.png", height: "50px",style:"vertical-align: middle; margin-right:5px;" %><%= @sign %>の占い結果</h1>
+    <h1><%= image_tag "#{@sign}.png", class:"fortune_result_image" %><%= @sign %>の占い結果</h1>
     <% if @horoscope['rank']!=12 %>
       <h2>第<%= @horoscope['rank'] %>位です。</h2>
     <% else %>
@@ -19,5 +19,6 @@
     <%= link_to "https://twitter.com/share?url=#{request.url}", target: '_blank', class: "twitter_share" do %>
       <i class="fa-brands fa-square-x-twitter"></i>結果をXでシェア
     <%end%>
+    <%= link_to '戻る', request.referrer, class: "wiki_link" %>
   </div>
 </div>

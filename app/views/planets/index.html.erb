@@ -7,17 +7,3 @@
     <p><%= link_to object['jpName'], planet_path(object['id']), class: "index-menu-link" %></p>
   <% end %>
 </div>
-
-<script>
-navigator.geolocation.getCurrentPosition(function(position) {
-  $.ajax({
-    url: '/update_location',
-    type: 'POST',
-    data: { 
-      latitude: position.coords.latitude, 
-      longitude: position.coords.longitude 
-    },
-    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))}
-  });
-});
-  </script>
