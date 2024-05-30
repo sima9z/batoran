@@ -1,0 +1,39 @@
+
+.planets_title{
+  text-align: center;
+  padding-top:150px;
+  margin-bottom:50px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+.planets_title i{
+  padding-right: 5px;
+}
+
+.planets_index{
+  width:15%;
+  margin:0 auto;
+  padding:20px;
+  background-color:#fff;
+  color:#333;
+  border-radius: 10px;
+}
+
+.planets_index p{
+  padding: 8px;
+  text-align: center;
+}
+
+.planet_detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.planet_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 100px 0;
+  width: 90%;
+}

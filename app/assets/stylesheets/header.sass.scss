@@ -1,0 +1,28 @@
+header{
+  height: 100px;
+  width: 100%;
+  background-color:#fff;
+  position: fixed;
+  top: 0;
+}
+
+.header-menu{
+  float: right;
+  margin-top:60px;
+}
+
+.header-menu-link{
+  text-decoration: none;
+  color:#333;
+  margin-right: 20px;
+  font-size:18px;
+}
+
+.header-menu-link:hover{
+  color: #4548fd;
+}
+
+.material-icons-outlined {
+  vertical-align: middle;
+  margin-right:5px;
+}
