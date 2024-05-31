@@ -21,7 +21,7 @@
           <% end %>
         </div>
         <%= link_to "wiki", "https://ja.wikipedia.org/wiki/#{object['jpName']}", class: "wiki_link" %>
-        <%= link_to '戻る', request.referrer, class: "wiki_link" %>
+        <%= link_to '戻る', request.referrer, class: "wiki_link startButton" %>
       </div>
       <div class="image_content">
         <%= image_tag object['starImage'], class: "show-image", style: "border-radius: 50%; box-shadow: 0 0 15px white;" %>
