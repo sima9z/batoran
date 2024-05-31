@@ -51,5 +51,17 @@ import "./controllers"
       animate();
     });
   }
+
+  window.onload = function() {
+    moveStars();
+  };
   
-  moveStars();
+  document.querySelectorAll('.startButton').forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      event.preventDefault(); // ページ遷移を防ぐ
+      moveStars();
+  
+      // ページ遷移を手動で行う
+      window.location.href = event.currentTarget.getAttribute('href');
+    });
+  });
