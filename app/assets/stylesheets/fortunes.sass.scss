@@ -26,6 +26,8 @@
 
 .fortune_image{
   height: 30px;
+  vertical-align: middle;
+  margin-right:1px;
 }
 
 .fortune_result_container{
@@ -85,4 +87,35 @@
   border: solid 2px #333;
   background-color: #fff;
   color:#333;
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .fortune_index{
+    margin-bottom: 20px;
+    width:60%;
+  }
+  .fortune_index p{
+    flex: 1 1 100%;
+  }
+  .fortune_result_container{
+    display: flex;
+    flex-direction: column;
+  }
+  .twitter_share_container{
+    display: flex;
+    flex-direction: column;
+  }
+  .twitter_share{
+    display: flex;
+    margin-right:0px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+  }
 }

@@ -1,14 +1,22 @@
-header{
-  height: 100px;
+.header-containar{
+  height: auto;
   width: 100%;
+  flex-wrap: wrap;
   background-color:#fff;
   position: fixed;
   top: 0;
+  display: flex;
+}
+
+.header-log{
+  height: 100px;
+  display: flex;
 }
 
 .header-menu{
-  float: right;
+  display: flex;
   margin-top:60px;
+  margin-left: auto; 
 }
 
 .header-menu-link{
@@ -25,4 +33,35 @@ header{
 .material-icons-outlined {
   vertical-align: middle;
   margin-right:5px;
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .header-containar{
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .header-menu{
+    flex: 1 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top:0px;
+    font-size:10px;
+    width: 100%;
+  }
+  .header-menu-link{
+    font-size:16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .material-icons-outlined {
+    display: flex;
+  }
 }

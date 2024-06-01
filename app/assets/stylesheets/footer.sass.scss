@@ -1,9 +1,10 @@
 footer{
-  position: fixed;
-  bottom: 0;
-  height:5%;
+  height:40px;
   width: 100%;
   background-color:#fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .footer-menu{
@@ -13,4 +14,12 @@ footer{
 
 i.fa-twitter-square{
   color: #000;
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+
 }
