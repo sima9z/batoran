@@ -14,17 +14,50 @@
   box-sizing: border-box;
 }
 
+html{
+  position: relative;
+}
+
 body{
-  height:1000px;
+  height:auto;
   color:#fff;
   background-image:url("photo-1488866022504-f2584929ca5f.avif");
   background-size: cover;
   background-repeat:no-repeat;
   font-family: "M PLUS 1p", sans-serif;
   overflow-x: hidden;
+  padding-bottom: 40px; 
 }
 
 main{
   height:100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+  body{
+    height:100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  main{
+    height:100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  body{
+    height:100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  main{
+    height:100%;
+    width: 100%;
+  }
 }

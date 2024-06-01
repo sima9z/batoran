@@ -1,7 +1,7 @@
 .top-title{
   text-align: center;
   padding-top:100px;
-  margin: 100px 0;
+  margin: 70px 0;
 }
 
 .top-log{
@@ -51,4 +51,32 @@
 .cautionary_note{
   text-align: center;
   margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+  .constellations_that_can_be_observed_today{
+    width:90%;
+    padding-bottom: 0;
+  }
+  .constellations_that_can_be_observed_today p {
+    flex: 1 1 30%; /* 1行で3つの要素を表示 */
+  }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+  .constellations_that_can_be_observed_today{
+    width:90%;
+    padding-bottom: 0;
+  }
+  .constellations_that_can_be_observed_today_title{
+    font-size: 13px;
+  }
+  .constellations_that_can_be_observed_today p {
+    flex: 1 1 50%;
+  }
+  .cautionary_note{
+    font-size: 14px;
+  }
 }
