@@ -28,7 +28,7 @@ class SignsController < ApplicationController
 
       # 検索クエリに基づいてフィルタリング
     if params[:search].present?
-      @data = data['results'].select { |result| result['jpName'].include?(params[:search]) }
+      @data = data['results'].select { |result| result['jpName'].include?(params[:search])|| result['enName'].include?(params[:search])|| result['ryaku'].include?(params[:search])|| result['season'].include?(params[:search])|| result['direction'].include?(params[:search])|| result['altitude'].include?(params[:search])|| result['content'].include?(params[:search])|| result['origin'].include?(params[:search])}
     else
       @data = data['results']
     end

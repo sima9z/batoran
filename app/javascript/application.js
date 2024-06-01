@@ -38,9 +38,9 @@ import "./controllers"
           star.style.left = initialLeft + 'px';
           setTimeout(() => requestAnimationFrame(animate), 200); // 1秒待ってから再度移動を開始
         } else {
-          posX += 2; // 移動速度を10倍に
-          posY += 2; // 移動速度を10倍に
-          angle += 3.6; // 回転速度はそのまま
+          posX += 2; // 移動速度
+          posY += 2; // 移動速度
+          angle += 3.6; // 回転速度
           star.style.top = (initialTop + posY) + 'px'; 
           star.style.left = (initialLeft + posX) + 'px'; 
           star.style.transform = `rotate(${angle}deg)`; // 画像を回転
