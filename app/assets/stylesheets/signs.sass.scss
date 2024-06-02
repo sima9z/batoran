@@ -12,7 +12,6 @@
 
 .signs_form{
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .signs_form_text{
@@ -38,7 +37,7 @@
   flex-wrap: wrap;
   justify-content: flex-start; 
   width:90%;
-  margin:0 auto;
+  margin:40px auto;
   padding:20px 20px 0px 20px;
   background-color:#fff;
   color:#333;
@@ -82,12 +81,35 @@
 
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
-
+  .signs_title{
+    padding-top:200px;
+  }
+  .signs_index{
+    margin-bottom: 40px;
+    width:80%;
+  }
+  .signs_index p{
+    flex: 1 1 30%;
+  }
+  .sign_detail{
+    flex-direction: column;
+    align-items: center;
+  }
+  .sign_info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .signs-show-image{
+    height: 300px;
+  }
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
+  .signs_title{
+    padding-top:150px;
+  }
   .signs_index{
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width:70%;
   }
   .signs_index p{

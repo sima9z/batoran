@@ -75,7 +75,24 @@
 
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
-
+  .text_upper_part{
+    padding-bottom:40px;
+  }
+  .text_upper_part_name{
+    padding-bottom:10px;
+  }
+  .text_content {
+    width: 85%;
+    padding:25px;
+    margin: 70px 20px;
+  }
+  .image_content {
+    flex-direction: column;
+  }
+  .wiki_link{
+    margin-right: 20px;
+    font-size:14px;
+  }
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
@@ -90,13 +107,11 @@
     padding:25px;
     margin: 70px 20px;
   }
-
   .image_content {
     flex-direction: column;
   }
-
   .wiki_link{
-    margin-right: 0px;
+    margin-right: 10px;
     font-size:14px;
   }
 }

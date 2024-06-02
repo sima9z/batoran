@@ -9,8 +9,8 @@
 }
 
 .header-log{
-  height: 100px;
   display: flex;
+  height: 100px;
 }
 
 .header-menu{
@@ -37,9 +37,22 @@
 
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
+  .header-log{
+    height: 125px;
+  }
+  .header-menu{
+    margin-top:80px;
+  }
+  .header-menu-link{
+    font-size:22px;
+    height: auto;
+  }
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
+  .header-log{
+    height: 100px;
+  }
   .header-containar{
     height: auto;
     width: 100%;

@@ -38,7 +38,7 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
       star.style.left = initialLeft + 'px';
   
       function animate() {
-        if (initialLeft + posX +8 >= screenWidth - starWidth || initialTop + posY+8 >= screenHeight - starHeight) {
+        if (initialLeft + posX +10 >= screenWidth - starWidth || initialTop + posY+10 >= screenHeight - starHeight) {
           // ランダムな位置にリセット
           posX = 0;
           posY = 0;
