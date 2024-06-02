@@ -18,6 +18,11 @@ i.fa-twitter-square{
 
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
+  footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */

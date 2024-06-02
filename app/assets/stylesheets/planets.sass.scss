@@ -2,7 +2,7 @@
 .planets_title{
   text-align: center;
   padding-top:150px;
-  margin-bottom:50px;
+  margin-bottom:20px;
   letter-spacing: 5px;
   font-weight: bold;
 }
@@ -13,7 +13,7 @@
 
 .planets_index{
   width:15%;
-  margin:0 auto;
+  margin:40px auto;
   padding:20px;
   background-color:#fff;
   color:#333;
@@ -46,10 +46,34 @@
 
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
-
+  .planets_title{
+    padding-top:200px;
+  }
+  
+  .planets_index{
+    margin-bottom: 40px;
+    width:30%;
+  }
+  .planets_index p{
+    flex: 1 1 100%;
+  }
+  .planet_detail{
+    flex-direction: column;
+    align-items: center;
+  }
+  .planet_info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .planets-show-image{
+    height: 250px;
+   }
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
+  .planets_title{
+    padding-top:150px;
+  }
   .planets_index{
     margin-bottom: 40px;
     width:50%;
