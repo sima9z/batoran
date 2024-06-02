@@ -22,3 +22,25 @@
     <%= link_to '戻る', request.referrer, class: "wiki_link startButton" %>
   </div>
 </div>
+
+<script>
+document.querySelector('.twitter_share').addEventListener('click', function(e) {
+  e.preventDefault();
+  const sign = '<%= @sign %>';
+  const rank = '<%= @horoscope['rank'] %>';
+  const content = '<%= @horoscope['content'] %>';
+  const item = '<%= @horoscope['item'] %>';
+  const color = '<%= @horoscope['color'] %>';
+  const siteUrl = '<%= "https://sign-dxuu.onrender.com/fortunes" %>'
+  const tweet = encodeURIComponent(
+    sign + "の今日の運勢\n" 
+    + (rank !=="12" ? "第" + rank + "位\n" : "最下位\n")
+    + content + "\nラッキーアイテム: " 
+    + item + "\nラッキーカラー: "
+    + color + "\n"
+    + siteUrl
+    );
+  const url = 'https://twitter.com/intent/tweet?text=' + tweet;
+  window.open(url, '_blank');
+});
+</script>
