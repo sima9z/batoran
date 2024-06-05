@@ -1,3 +1,7 @@
+.planets_containar{
+  display: flex;
+  flex-direction: column;
+}
 
 .planets_title{
   text-align: center;
@@ -12,7 +16,9 @@
 }
 
 .planets_index{
-  width:15%;
+  display: flex;
+  flex-wrap: wrap;
+  width:30%;
   margin:40px auto;
   padding:20px;
   background-color:#fff;
@@ -21,6 +27,8 @@
 }
 
 .planets_index p{
+  flex: 1 1 100%;
+  box-sizing: border-box;
   padding: 8px;
   text-align: center;
 }

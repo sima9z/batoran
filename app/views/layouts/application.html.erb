@@ -23,12 +23,15 @@
     </header>
     
     <main>
-      <%= image_tag '星(大).png', class: 'shooting-bigstar star' %>
-      <%= image_tag '星(中).png', class: 'shooting-middlestar star' %>
-      <%= image_tag '星(小).png', class: 'shooting-smallstar star' %>
+      <div id="content">
 
-      <%= yield %>
-      
+        <%= image_tag '星(大).png', class: 'shooting-bigstar star' %>
+        <%= image_tag '星(中).png', class: 'shooting-middlestar star' %>
+        <%= image_tag '星(小).png', class: 'shooting-smallstar star' %>
+
+        <%= yield %>
+
+      </div>
     </main>
 
     <footer>

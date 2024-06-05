@@ -1,9 +1,11 @@
-<div class="planets_title">
-  <h2><i class="material-icons-outlined">rocket</i>惑星一覧</h2>
-</div>
+<div class="planets_containar">
+  <div class="planets_title">
+    <h2><i class="material-icons-outlined">rocket</i>惑星一覧</h2>
+  </div>
 
-<div class="planets_index">
-  <% @planets_data['results'].each do |object| %>
-    <p><%= link_to object['jpName'], planet_path(object['id']), class: "index-menu-link startButton" %></p>
-  <% end %>
+  <div class="planets_index">
+    <% @planets_data['results'].each do |object| %>
+      <p><%= link_to object['jpName'], planet_path(object['id']), class: "index-menu-link startButton" %></p>
+    <% end %>
+  </div>
 </div>

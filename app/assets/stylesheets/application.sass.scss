@@ -19,7 +19,8 @@ html{
 }
 
 body{
-  height:auto;
+  height:100%;
+  min-height: 100vh;
   color:#fff;
   background-image:url("photo-1488866022504-f2584929ca5f.avif");
   background-size: cover;
@@ -60,6 +61,7 @@ main{
   }
   body{
     height:100%;
+    min-height: 100vh;
     width: 100%;
     overflow-x: hidden;
   }

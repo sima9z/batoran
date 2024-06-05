@@ -1,3 +1,8 @@
+.fortune_containar{
+  display: flex;
+  flex-direction: column;
+}
+
 .fortune_titles{
   text-align: center;
   padding-top:150px;
@@ -11,6 +16,8 @@
 }
 
 .fortune_index{
+  display: flex;
+  flex-wrap: wrap;
   width:15%;
   margin:40px auto;
   padding:20px;
@@ -20,6 +27,8 @@
 }
 
 .fortune_index p{
+  flex: 1 1 100%;
+  box-sizing: border-box;
   padding: 8px;
   text-align: center;
 }

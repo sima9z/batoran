@@ -1,23 +1,25 @@
-<div class="signs_title">
-  <h2><i class="material-icons-outlined">star_rate</i>星座一覧</h2>
-</div>
-
-<%= form_with url: signs_path, method: :get, local: true do |form| %>
-  <div class="signs_form">
-    <%= form.text_field :search, value: params[:search], class:"signs_form_text" %>
-    <%= form.submit "検索", class:"signs_form_button" %>
+<div class="signs_containar">
+  <div class="signs_title">
+    <h2><i class="material-icons-outlined">star_rate</i>星座一覧</h2>
   </div>
-<% end %>
 
-<div class="signs_index">
-  <% if @data.present? %>
-    <% @data.each do |object| %>
-    <p><%=link_to object['jpName'], sign_path(object['id']), class: "index-menu-link startButton" %></p>
-    <% end %>
-  <% else %>
-    <p>検索結果がありません。</p>
+  <%= form_with url: signs_path, method: :get, local: true do |form| %>
+    <div class="signs_form">
+      <%= form.text_field :search, value: params[:search], class:"signs_form_text" %>
+      <%= form.submit "検索", class:"signs_form_button" %>
+    </div>
   <% end %>
-  <p class="dummy"></p>
-  <p class="dummy"></p>
-  <p class="dummy"></p>
+
+  <div class="signs_index">
+    <% if @data.present? %>
+      <% @data.each do |object| %>
+      <p><%=link_to object['jpName'], sign_path(object['id']), class: "index-menu-link startButton" %></p>
+      <% end %>
+    <% else %>
+      <p>検索結果がありません。</p>
+    <% end %>
+    <p class="dummy"></p>
+    <p class="dummy"></p>
+    <p class="dummy"></p>
+  </div>
 </div>
